@@ -553,11 +553,8 @@ hr {
     .destination-text {
     color: #d3cdcd;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-weight: bold; */
     line-height: 2;
     margin: 1rem 0 2.8125rem 1rem;
-    /* margin-bottom: 45px; */
-    /* margin-top: 0; */
     width: 100%;
   }
 
@@ -819,7 +816,6 @@ hr {
     font-size: 6.25rem;
     height: 120px;
     margin: 0 0 0 0.3125rem;
-    /* padding-left: 2rem; */
   }
 
   .content .text-content p {
@@ -870,7 +866,6 @@ hr {
     .destination-navbar
     .destination-links {
     text-align: center;
-    /* padding: 0 6px 17px;  */
     padding-right: 20px;
     margin: 0 0.5rem 0 0;
   }
@@ -880,8 +875,6 @@ hr {
     font-family: sans;
     font-size: 95px;
     margin: 1rem 3.5rem 0 1rem;
-    /* margin-top: 30px; */
-    /* margin-bottom: 0; */
   }
 
   .destination

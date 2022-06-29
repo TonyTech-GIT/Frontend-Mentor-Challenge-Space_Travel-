@@ -1,5 +1,5 @@
-const activePage = window.location.pathname;
-console.log(activePage);
+// const activePage = window.location.pathname;
+// console.log(activePage);
 
 const swiper = new Swiper(".swiper", {
   // Optional parameters
