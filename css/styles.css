@@ -989,6 +989,13 @@ hr {
     width: 100%;
   }
 
+  .technology-section .tech-num_text :nth-child(3) {
+    order: 0;
+  }
+  .technology-section .tech-num_text :nth-child(2) {
+    order: 1;
+  }
+
   .technology-section .tech-num_text .term-num1 {
     /* background-color: #fff; */
     border: 1px solid grey;
