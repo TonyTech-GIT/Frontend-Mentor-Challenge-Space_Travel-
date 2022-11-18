@@ -22,8 +22,12 @@
       <div class="line"></div>
 
       <!-- id set to a tag, so we can target the img tag here -->
-      <a href="#" id="open-btn" class="open-btn" onclick="openBtn()"
-        ><img src="images/shared/icon-hamburger.svg" alt="open-icon"
+      <a href="#" class="open-btn"
+        ><img
+          id="open-btn"
+          src="images/shared/icon-hamburger.svg"
+          alt="open-icon"
+          onclick="openBtn()"
       /></a>
 
       <nav id="navbar-links" class="navbar-links">
@@ -34,13 +38,13 @@
       </nav>
 
       <!-- Id set directly to img tag, so no need to target the img tag -->
-      <a href="#" class="close-btn" onclick="closeBtn()">
-        <img
+      <a href="#" class="close-btn"
+        ><img
           id="close-btn"
           src="images/shared/icon-close.svg"
           alt="close-icon"
-        />
-      </a>
+          onclick="closeBtn()"
+      /></a>
     </section>
 
     <!-- header section end -->

@@ -29,23 +29,27 @@ const swiper = new Swiper(".swiper", {
   // },
 });
 
-function openBtn() {
-  const openButton = document.getElementById("open-btn");
-  const closeButton = document.getElementById("close-btn");
-  const navbarLinks = document.getElementById("navbar-links");
+// function openBtn() {
+//   const openButton = document.getElementById("open-btn");
+//   //const closeButton = document.getElementById("close-btn");
+//   const closeButton = document.querySelector(".close-btn");
+//   const navbarLinks = document.getElementById("navbar-links");
 
-  openButton.style.display = "none";
-  navbarLinks.style.display = "flex";
-  closeButton.style.display = "block";
-}
+//   // closeButton.style.display = "block";
+//   closeButton.classList.add("close-btn2");
+//   openButton.style.display = "none";
+//   navbarLinks.style.display = "flex";
+// }
 
-function closeBtn() {
-  const openButton = document.getElementById("open-btn");
-  const closeButton = document.getElementById("close-btn");
-  const navbarLinks = document.getElementById("navbar-links");
+// function closeBtn() {
+//   // const openButton = document.getElementById("open-btn");
+//   const openButton = document.querySelector("#open-btn");
+//   const closeButton = document.getElementById("close-btn");
+//   const navbarLinks = document.getElementById("navbar-links");
 
-  // closeButton.classList.add('remove')
-  openButton.style.display = "block";
-  closeButton.style.display = "none";
-  navbarLinks.style.display = "none";
-}
+//   // closeButton.classList.add('remove')
+//   // openButton.style.display = "block";
+//   openButton.classList.add("open-btn2");
+//   closeButton.style.display = "none";
+//   navbarLinks.style.display = "none";
+// }
