@@ -785,6 +785,8 @@ hr {
 
 /* MOBILE MEDIA QUERY */
 
+/* mobile navbar still is progress...will remove this comment when completed */
+
 @media (max-width: 578px) {
   body {
     overflow-x: hidden;
