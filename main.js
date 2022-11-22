@@ -1,6 +1,24 @@
 // const activePage = window.location.pathname;
 // console.log(activePage);
 
+const navLinks = document.querySelector(".navbar-links");
+const mobileToggle = document.querySelector(".mobile-toggle");
+
+mobileToggle.addEventListener("click", () => {
+  const visibility = navLinks.getAttribute("data-visible");
+
+  // console.log(visibility);
+  if (visibility === "false") {
+    navLinks.setAttribute("data-visible", true);
+    mobileToggle.setAttribute("aria-expanded", true);
+  } else {
+    navLinks.setAttribute("data-visible", false);
+    mobileToggle.setAttribute("aria-expanded", false);
+  }
+});
+
+// SWIPER JS CAROUSEL....
+
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   // direction: 'vertical',
@@ -29,23 +47,23 @@ const swiper = new Swiper(".swiper", {
   // },
 });
 
-function openBtn() {
-  const openButton = document.getElementById("open-btn");
-  const closeButton = document.getElementById("close-btn");
-  const navbarLinks = document.getElementById("navbar-links");
+// function openBtn() {
+//   const openButton = document.getElementById("open-btn");
+//   const closeButton = document.getElementById("close-btn");
+//   const navbarLinks = document.getElementById("navbar-links");
 
-  openButton.style.display = "none";
-  navbarLinks.style.display = "flex";
-  closeButton.style.display = "block";
-}
+//   openButton.style.display = "none";
+//   navbarLinks.style.display = "flex";
+//   closeButton.style.display = "block";
+// }
 
-function closeBtn() {
-  const openButton = document.getElementById("open-btn");
-  const closeButton = document.getElementById("close-btn");
-  const navbarLinks = document.getElementById("navbar-links");
+// function closeBtn() {
+//   const openButton = document.getElementById("open-btn");
+//   const closeButton = document.getElementById("close-btn");
+//   const navbarLinks = document.getElementById("navbar-links");
 
-  // closeButton.classList.add('remove')
-  openButton.style.display = "block";
-  closeButton.style.display = "none";
-  navbarLinks.style.display = "none";
-}
+//   // closeButton.classList.add('remove')
+//   openButton.style.display = "block";
+//   closeButton.style.display = "none";
+//   navbarLinks.style.display = "none";
+// }

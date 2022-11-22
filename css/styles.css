@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .home-page {
   background-image: url("../images/home/background-home-desktop.jpg");
   margin: 0;
@@ -24,11 +28,15 @@
   justify-content: space-around;
   align-items: center;
   margin: 2rem 0 2rem 5rem;
-  padding: 2rem auto 2rem auto;
+  /* padding: 2rem auto 2rem auto; */
+  position: relative;
 }
 .header .logo {
   height: 1.5rem;
-  margin: 0 8rem 0 3rem;
+  /* margin: 0 8rem 0 3rem; */
+  position: absolute;
+  left: 45px;
+  top: 14px;
 }
 
 #open-btn {
@@ -43,19 +51,26 @@
   display: none;
 }
 
+.mobile-toggle {
+  display: none;
+}
+
 .header .line {
   background: #3b3a3a;
   height: 0.09px;
   position: absolute;
-  left: 11rem;
-  width: 51%;
+  left: 8rem;
+  width: 60%;
+  top: 24px;
 }
 .header .navbar-links {
   background: linear-gradient(0.25turn, #27272988, #9d9da3e3, #2920556b);
-  margin-left: 26rem;
+  /* margin-left: 26rem; */
+  /* display: flex; */
   padding: 1rem 0rem 1rem 7rem;
-  /* padding-right: 7rem; */
-  /* width: 30rem; */
+  position: absolute;
+  right: 0;
+  top: 0rem;
 }
 
 .header .navbar-links.active {
@@ -64,6 +79,8 @@
 
 .navbar-links .num {
   color: #e4dede;
+  font-weight: 700;
+  margin-inline-end: 0.75rem;
 }
 .header .navbar-links a {
   color: #d6cece;
@@ -103,7 +120,7 @@
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
   margin: 0 0 1rem 3rem;
-  width: 50%;
+  width: 60%;
 }
 .content .explore {
   background-color: #fff;
@@ -436,6 +453,9 @@ hr {
 /* TECHNOLOGY SECTION ENDS */
 
 /* MEDIA QUERIES */
+
+/* TABLET VIEW */
+
 @media (max-width: 769px) {
   .home-page {
     background-image: url("../images/home/background-home-tablet.jpg");
@@ -634,7 +654,7 @@ hr {
   .crew-section .crew-wrapper .crew-content .crew-name {
     color: #e4dede;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3.625rem;
+    font-size: 3.1rem;
     margin: 0.5rem 0 0;
   }
 
@@ -805,10 +825,11 @@ hr {
     justify-content: space-between;
     align-items: center;
     margin: 2rem 0 2rem 0rem;
+    position: relative;
     /* padding: 2rem auto 2rem auto; */
   }
 
-  .header .navbar-links {
+  /* .header .navbar-links {
     background: linear-gradient(0.25turn, #27272988, #9d9da3e3, #2920556b);
     display: none;
     justify-content: center;
@@ -818,19 +839,74 @@ hr {
     top: 5rem;
     right: 0.3rem;
     padding: 2rem 1rem;
+  } */
+
+  .header .navbar-links {
+    display: block;
+    position: fixed;
+    background: hsl(0 0% 0% / 0.95);
+    inset: 0 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+    padding: min(30vh, 10rem) 2rem;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
+
+    z-index: 1000;
   }
 
-  .navbar-links .num {
-    color: #e4dede;
+  .header .navbar-links[data-visible="true"] {
+    transform: translateX(0%);
   }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    .header .navbar-links {
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(2rem);
+    }
+  }
+  .header .navbar-links a {
+    margin-block-end: 0.75rem;
+    padding: 0;
+  }
+
+  .sr-only {
+    visibility: hidden;
+  }
+
+  .mobile-toggle {
+    display: block;
+    position: absolute;
+    width: 1.7rem;
+    aspect-ratio: 1;
+    background-color: transparent;
+    background-image: url("/images/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0;
+    top: 0.4rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+
+  .mobile-toggle[aria-expanded="true"] {
+    background-image: url("/images/shared/icon-close.svg");
+  }
+
+  /* .navbar-links .num {
+    color: #e4dede;
+  } */
 
   .header .navbar-links a {
     color: #d6cece;
     font-size: 16px;
     padding: 1rem 1rem;
-    text-align: center;
+    /* text-align: center; */
     text-decoration: none;
     display: block;
+    transition: 200ms ease-in-out;
   }
 
   .header .navbar-links a:hover {
@@ -843,27 +919,33 @@ hr {
     height: 2rem;
     padding: 0 0rem 0 0.75rem;
     margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   /* id set to a tag, so we can target the img tag here */
-  #open-btn {
+
+  /* #open-btn {
     display: block;
     padding-right: 0.75rem;
     cursor: pointer;
-  }
+  } */
   /* .open-btn {
     display: block;
   } */
-  .open-btn2 {
+  /* .open-btn2 {
     display: block;
-  }
+  } */
 
   /* #open-btn img {
     display: block;
     margin: 0 3rem 0 0;
   } */
 
-  /* Id set directly to img tag, so no need to target the img tag */
-  .close-btn {
+  /* Id set directly to img tag, so no need to target the 
+  img tag */
+
+  /* .close-btn {
     display: none;
     padding: 0 0.75rem 0 0;
   }
@@ -873,7 +955,7 @@ hr {
 
   #close-btn {
     display: block;
-  }
+  } */
 
   .content {
     display: flex;
@@ -893,7 +975,8 @@ hr {
     color: #e4dede;
     display: inline-block;
     font-size: 1.8rem;
-    margin: 1rem 0 0 2rem;
+    /* margin: 1rem 0 0 5rem; */
+    text-align: center;
     padding: 0;
     width: 100%;
   }
@@ -934,7 +1017,7 @@ hr {
 
   .destination #destination-header {
     color: #d3cdcd;
-    margin: 2.5rem 0 0 3rem;
+    margin: 10rem 0 0 3rem;
   }
 
   .destination .destination-wrapper {
@@ -946,7 +1029,20 @@ hr {
   }
 
   .destination .destination-wrapper .destination-img {
-    margin: 2.5rem 2.25rem 0 7rem;
+    margin: 2.5rem auto;
+  }
+
+  .destination .destination-wrapper .destination-content {
+    /* margin: 60px 0 60px 120px; */
+    margin: 60px auto;
+    text-align: center;
+    max-width: 30rem;
+  }
+
+  .destination .destination-wrapper .destination-content .destination-navbar {
+    margin: 0 1rem 0 0;
+    /* padding-inline: 2rem; */
+    min-width: 12px;
   }
 
   .destination
@@ -957,6 +1053,14 @@ hr {
     text-align: center;
     padding-right: 20px;
     margin: 0 0.5rem 0 0;
+  }
+
+  .destination .destination-wrapper .destination-content .destination-subtitle {
+    /* text-align: center; */
+    line-height: 1.5;
+    width: 92%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .destination .destination-wrapper .destination-content #planets-subtitle {
@@ -975,7 +1079,8 @@ hr {
     font-family: Arial, Helvetica, sans-serif;
     /* font-weight: bold; */
     line-height: 2;
-    margin: 1rem 4rem 2.8125rem 1rem;
+    margin: 0;
+    padding-inline-end: 2rem;
   }
 
   .destination
@@ -987,7 +1092,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin: 0 0 0 3rem;
+    margin: 0 2rem 0 0;
   }
 
   hr {
@@ -998,7 +1103,7 @@ hr {
   /* CREW - MOBILE */
   .crew-section .crew-header {
     color: #d3cdcd;
-    margin: 3.125rem 0 0 3rem;
+    margin: 10rem 0 0 3rem;
   }
 
   .crew-section .crew-wrapper {
@@ -1052,9 +1157,10 @@ hr {
   }
 
   /* TECHNOLOGY - MOBILE */
+
   .technology-section .technology-header {
     color: #d3cdcd;
-    margin: 2.5rem 0 0 3rem;
+    margin: 10rem 0 0 3rem;
   }
 
   .technology-section .tech-num_text .technology-texts h3 {
