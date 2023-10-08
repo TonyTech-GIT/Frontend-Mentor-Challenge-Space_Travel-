@@ -1,0 +1,372 @@
+/* DESTINATION STYLING STARTS HERE */
+
+.destination-page {
+  background-image: url(../../images/destination/background-destination-desktop.jpg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 2rem 0 2rem 5rem;
+  padding: 2rem auto 2rem auto;
+}
+.header .destination-logo {
+  position: absolute;
+  height: 1.5rem;
+  left: -2em;
+  /* margin: 0 8rem 0 3rem; */
+}
+.header .destination-line {
+  background: #3b3a3a;
+  height: 0.09px;
+  position: absolute;
+  left: 6rem;
+  width: 60%;
+}
+.header .destination_navbar-links {
+  background: linear-gradient(0.25turn, #27272988, #9d9da3e3, #2920556b);
+  margin-left: 0rem;
+  position: relative;
+  left: 49.5em;
+  padding: 1rem 0rem 1rem 7rem;
+  /* padding-right: 7rem; */
+  /* width: 30rem; */
+}
+
+.header .destination_navbar-links.active {
+  display: none;
+}
+
+.destination_navbar-links .num {
+  color: #e4dede;
+}
+.header .destination_navbar-links a {
+  color: #d6cece;
+  font-size: 10px;
+  padding: 0 12px;
+  text-decoration: none;
+}
+.header .destination_navbar-links a:hover {
+  border-bottom: 2px solid #e4dede;
+  border-width: 2%;
+  padding-bottom: 17px;
+  /* padding-left: 22px; */
+}
+
+.destination {
+  margin-bottom: 0;
+}
+.destination #destination-header {
+  color: #d3cdcd;
+  margin: 6rem 0 0 3rem;
+}
+.destination #destination-header .destination-span {
+  color: #808080;
+  padding: 0 1rem;
+}
+
+.destination .destination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 6rem 0;
+}
+.destination .destination-wrapper .destination-img {
+  margin: 0 auto;
+}
+
+.destination .destination-wrapper .destination-content .destination-navbar {
+  margin: 0 0 0 0;
+}
+.destination .destination-wrapper .destination-content {
+  margin: 60px 0 60px 150px;
+}
+
+/* .destination .destination-wrapper .destination-content .destination-navbar .destination-links{
+     /* text-align: center; */
+/* padding: 0 6px 17px; */
+
+.destination
+  .destination-wrapper
+  .destination-content
+  .destination-navbar
+  .destination-links
+  a {
+  color: #808080;
+  /* margin: 1px 15px; */
+  padding: 0 12px 14px;
+  text-decoration: none;
+}
+.destination
+  .destination-wrapper
+  .destination-content
+  .destination-links
+  a:hover {
+  border-bottom: 2px solid #e4dede;
+  padding: 0 12px 14px;
+}
+
+.destination .destination-wrapper .destination-content .destination-subtitle {
+  /* text-align: center; */
+  line-height: 1.5;
+  width: 80%;
+}
+
+.destination .destination-wrapper .destination-content #planets-subtitle {
+  color: #e4dede;
+  font-size: 95px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.destination
+  .destination-wrapper
+  .destination-content
+  .destination-subtitle
+  .destination-text {
+  color: #d3cdcd;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: bold; */
+  line-height: 2;
+  margin-bottom: 45px;
+  margin-top: 0;
+  width: 100%;
+}
+
+hr {
+  /* color: #3b3a3a; */
+  border-style: none;
+  border: 1px solid #2b2a2a;
+  height: 0;
+}
+
+.destination
+  .destination-wrapper
+  .destination-content
+  .destination-subtitle
+  .destination-distance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem 0 0;
+}
+.destination
+  .destination-wrapper
+  .destination-content
+  .destination-subtitle
+  .destination-distance
+  .destination-p {
+  color: #8f8a8a;
+}
+.destination
+  .destination-wrapper
+  .destination-content
+  .destination-subtitle
+  .destination-distance
+  .destination-span {
+  color: #e4dede;
+  font-size: 28px;
+}
+
+/* DESTINATION SECTION ENDS */
+
+/* DESTINATION MEDIA QUERIES (TABLET VERSION)... */
+@media (max-width: 769px) {
+  /* DESTINATION MEDIA-QUERY */
+
+  .destination-page {
+    background-image: url(../../images/destination/background-destination-tablet.jpg);
+  }
+
+  .destination #destination-header {
+    color: #d3cdcd;
+    margin: 10rem 0 0 7.1875rem;
+    /* margin-left: 3.2rem;
+    padding: 1rem 0rem 1rem 2rem; */
+  }
+  .header .destination-line {
+    display: none;
+  }
+
+  .header .destination_navbar-links {
+    background: linear-gradient(0.25turn, #27272988, #9d9da3e3, #2920556b);
+    margin-left: 3.2rem;
+    padding: 1rem 0rem 1rem 2rem;
+    position: relative;
+    left: 10em;
+    /* padding-right: 7rem; */
+    /* width: 25rem; */
+  }
+
+  .destination .destination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5rem 6rem 0;
+  }
+
+  .destination .destination-wrapper .destination-img {
+    /* margin: 2.5rem 2.25rem 0 5.625rem; */
+    margin: 2.5rem auto;
+  }
+
+  .destination .destination-wrapper .destination-content {
+    /* margin: 60px 0 60px 120px; */
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .destination .destination-wrapper .destination-content .destination-navbar {
+    margin: 0rem 0 0 3rem;
+    /* padding-inline: 2rem; */
+    min-width: 12px;
+  }
+
+  .destination
+    .destination-wrapper
+    .destination-content
+    .destination-navbar
+    .destination-links {
+    text-align: center;
+    /* padding: 0 6px 17px;  */
+    padding-right: 80px;
+  }
+
+  .destination .destination-wrapper .destination-content .destination-subtitle {
+    /* text-align: center; */
+    line-height: 1.5;
+    width: 80%;
+    max-width: 100%;
+    margin: 0 2rem;
+  }
+
+  .destination .destination-wrapper .destination-content #planets-subtitle {
+    color: #e4dede;
+    font-family: sans;
+    font-size: 95px;
+    margin: 1rem 0 0 0;
+    /* margin-top: 30px; */
+    /* margin-bottom: 0; */
+  }
+
+  .destination
+    .destination-wrapper
+    .destination-content
+    .destination-subtitle
+    .destination-text {
+    color: #d3cdcd;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    margin: 1rem 0 2.8125rem 0rem;
+    min-width: 100%;
+    width: 80px;
+  }
+
+  .destination
+    .destination-wrapper
+    .destination-content
+    .destination-subtitle
+    .destination-distance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 0;
+  }
+}
+
+/* MOBILE MEDIA QUERY */
+/* DESTINATION MEDIA QUERIES (MOBILE VERSION)... */
+
+@media (max-width: 578px) {
+  /* DESTINATION - MOBILE */
+
+  .destination-page {
+    background-image: url(../../images/destination/background-destination-mobile.jpg);
+  }
+  .header .destination-logo {
+    position: relative;
+    left: -3em;
+  }
+  .header .destination-line {
+    display: none;
+  }
+  .header .destination_navbar-links {
+    display: none;
+  }
+  .header .open-btn {
+    position: relative;
+    left: 0em;
+  }
+
+  .destination #destination-header {
+    color: #d3cdcd;
+    margin: 2.5rem 0 0 3rem;
+  }
+
+  .destination .destination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 1.5rem 2rem 0;
+  }
+
+  .destination .destination-wrapper .destination-img {
+    margin: 2.5rem 2.25rem 0 3rem;
+  }
+
+  .destination .destination-wrapper .destination-content .destination-navbar {
+    position: relative;
+    left: -3.5em;
+  }
+
+  .destination
+    .destination-wrapper
+    .destination-content
+    .destination-navbar
+    .destination-links {
+    text-align: center;
+    padding-right: 20px;
+    /* margin: 0 0.5rem 0 0; */
+  }
+
+  .destination .destination-wrapper .destination-content #planets-subtitle {
+    color: #e4dede;
+    font-family: sans;
+    font-size: 95px;
+    margin: 1rem 4rem 0 1rem;
+  }
+
+  .destination
+    .destination-wrapper
+    .destination-content
+    .destination-subtitle
+    .destination-text {
+    color: #d3cdcd;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    position: relative;
+    left: -1.5em;
+  }
+
+  .destination
+    .destination-wrapper
+    .destination-content
+    .destination-subtitle
+    .destination-distance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    left: -1em;
+  }
+
+  hr {
+    margin-right: 2rem;
+    width: 80vw;
+  }
+}
