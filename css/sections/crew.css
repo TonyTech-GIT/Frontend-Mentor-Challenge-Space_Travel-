@@ -202,6 +202,9 @@
   .header .crew-line {
     display: none;
   }
+  .header .crew_navbar-links {
+    display: none;
+  }
   .header .open-btn {
     position: relative;
     left: 20em;
